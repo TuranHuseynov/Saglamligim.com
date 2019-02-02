@@ -1,0 +1,67 @@
+﻿@model AzmanAzWebPage.Models.Kampanya
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Az/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Kampanya</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.kampanya_adi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kampanya_adi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kampanya_mehsullari)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kampanya_mehsullari)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kampanya_qiymeti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kampanya_qiymeti)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kampanya_info)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kampanya_info)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kampanya_photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kampanya_photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kampanya_link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kampanya_link)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.kampanya_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

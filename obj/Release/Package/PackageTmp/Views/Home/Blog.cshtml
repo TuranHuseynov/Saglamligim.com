@@ -1,0 +1,238 @@
+﻿@model AzmanAzWebPage.Viewmodel.MyModel
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    @*
+        <section id="nav" class="text-center" style="font-size: 20px;">
+            <nav class="navbar navbar-default" role="navigation">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <button onclick='return doAlert()' id="mooon" style="    background: no-repeat;
+        border: none;
+        color: #30322c;font-size: 39px;
+        position: relative;
+        top: 1px;">
+                        <i class="fa fa-moon-o" aria-hidden="true"></i>
+                    </button>
+                    <a href="http://saglamligim.com/" id="soon" style="display:none;font-size: 30px;
+        position: relative;
+        left: 13px;
+        color: #9ab919;
+        top: 7px;"><i class="fa fa-sun-o" aria-hidden="true"></i></a>
+                    <form class="navbar-form navbar-left" role="search">
+                        @*<div class="form-group">
+                                <input type="text" class="form-control" placeholder="Axtar" id="myInput" name="myInput">
+                            </div>*@
+
+    @*<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Məhsullar <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="blog.html">Double 48</a></li>
+                            <li><a href="#">Sigarason</a></li>
+                            <li><a href="#">Tüytökücü</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+            </ul>
+
+        </div>
+        </nav>
+        </section>
+
+        <div class="clearfix"></div>
+        <header id="headerisiq">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <a href="http://saglamligim.com">
+                            <img src="~/YeniWeb/images/logo.png" style="margin-top: 10px;
+        width: 100%;">
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        Html.Partial("_AdresWeb")
+                        <!--     <div class="saat text-center">
+                              <i class="fa fa-clock-o saatic" aria-hidden="true"></i>
+                              <p class="onsekk">10:00 - 18:00</p>
+                            </div> -->
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        Html.Partial("_AdresPhone")
+                    </div>
+
+                </div>
+            </div>
+        </header>
+    *@
+
+    @*<section id="blog">
+            <div class="container">
+                @foreach (var item in Model._mallar)
+                {
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="itemblog">
+                                <img src="~/Yuklenen/@item.mal_resmi" style="width: 100%;transition: .4s linear;">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h2 class="text-center">@item.mal_adi</h2>
+                            <h3>Qiymət : @item.mal_qiymeti</h3>
+
+                            <p style="font-size: 19px;letter-spacing: 1px;line-height: 33px;">@item.mal_info</p><br>
+                            @if (item.mal_id == 46)
+                            {
+                                <video controls style="width: 48%;
+                                                 float: left;">
+                                    <source src="~/Video/anagain.mp4" type="video/mp4" />
+                                </video>
+                            }
+
+                            <button onclick='return doAlert()' style="margin: 20px;font-size: 19px;padding: 6px 27px;border: 1px solid #ccc;border-radius: 42px;background: #175f75;color: white;float:right;" id="firstSif">Sifariş et</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="gizliform" style="display: block;">
+                            <div class="container">
+                                <div class="col-md-12 col-xs-12">
+                                    <form action="/Home/BlogForm" method="post" name="frm">
+                                        <div class="md-form mb-5">
+                                            <i class="fa fa-user prefix grey-text"></i>
+                                            <label data-error="wrong" data-success="right" for="form3">Ad,Soyad</label>
+                                            <input type="text" id="form3" class="form-control validate" name="zakazim_adi_soyad" style="margin-bottom: 20px;">
+                                        </div>
+                                        <div class="md-form mb-4">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <label data-error="wrong" data-success="right" for="form2">Telefon</label>
+                                            <input type="tel" name="zakazim_telefon" id="form2" class="form-control validate">
+                                        </div>
+                                        <input type="text" name="zakazim_mehsul" style="display:none" value="@item.mal_adi" />
+
+                                        <div class="text-center">
+                                            <button type="submit" style="margin: 20px;font-size: 19px;padding: 6px 27px;border: 1px solid #ccc;border-radius: 42px;background: #175f75;color: white;" onclick="return IsEmpty()">SİFARİŞ</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </section>*@
+
+    <div class="contact-top-agileinfo">
+        <div class="container">
+            <h3 class="title-w3layouts contact-head">Məhsul Blogu <i class="fa fa-bell-o" aria-hidden="true"></i><i class="fa fa-bell" aria-hidden="true"></i></h3>
+            <div class="col-md-6 contact-left-wthree">
+                <h5>Əlaqə nömrələri</h5>
+                <div class="customer-info-w3ls">
+                    <img src="https://image.freepik.com/free-vector/mobile-phone-template_1412-16.jpg" alt="" />
+                    <div class="customer-right">
+                        <h6>Mobil nömrəmiz</h6>
+                        <p><span>055 440 89 57</span></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="customer-info-w3ls">
+                    <img src="https://i.pinimg.com/originals/b1/a2/c4/b1a2c49e30496b494e9b80f9d66fca42.jpg" alt="" />
+                    <div class="customer-right">
+                        <h6>Şəhər nömrəmiz</h6>
+                        <p><span>012  437 80 00</span></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-md-6 contact-right-wthree">
+                <h5>Sosyalda biz</h5>
+                <div class="connect-w3-agile">
+                    <i class="fa fa-facebook-square ione" aria-hidden="true"></i>
+                    <p>Facebook səhifemizi  <a href="https://www.facebook.com/saglamligim/">Saglamligim</a> izləyə ve yeniliklərdən xəbər ala bilərsiniz.</p>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="connect-w3-agile">
+                    
+                    <p>Instagram səhifemizi <a href="https://www.instagram.com/saglamligim/">Saglamligim</a> izləyə ve yeniliklərdən xəbər ala bilərsiniz</p>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact-form-->
+    @foreach (var item in Model._mallar)
+    {
+    <div class="jarallax contact-bottom" id="contact">
+        <div class="col-md-6 agileits_w3layouts-map">
+            <img src="~/Yuklenen/@item.mal_resmi" style="width: 100%;transition: .4s linear;border-radius: 38%;">
+               @if (item.mal_id == 57)
+                            {
+                                <video controls style="width: 48%;
+                                                 float: left;">
+                                    <source src="~/Video/ALLAH cc 99 İsmini Sayan Sesli Tesbih Esmaül Hüsna (1).mp4" type="video/mp4" />
+                                </video>
+                            }
+
+        </div>
+
+        <div class="col-md-6 contact-right-w3l">
+            <h3 class="title-w3layouts white-agileits">@item.mal_adi<i class="fa fa-bell-o" aria-hidden="true"></i><i class="fa fa-bell white-agileits" aria-hidden="true"></i></h3>
+            <p style="color: snow;
+    margin-bottom: 55px;">@item.mal_info</p>
+            <form action="/Home/BlogForm" method="post" name="frm">
+                <input type="text" class="name" name="zakazim_adi_soyad" placeholder="Ad,Soyad" required="">
+                <input type="text" class="name" name="zakazim_telefon" placeholder="Telefon" required="">
+                <input type="text" name="zakazim_mehsul" style="display:none" value="@item.mal_adi" />
+
+                <input type="submit" value="Sifaris et">
+            </form>
+    </div>
+    <div class="clearfix"></div>
+    </div>
+
+
+
+    }
+
+
+
+
+
+
+
+    @*<script type="text/javascript">
+            function doAlert() {
+                $('#gizliform').css('display', 'block');
+                $('#firstSif').css('display', 'none');
+            }
+        </script>*@
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript">
+
+        function IsEmpty() {
+            if (document.forms['frm'].zakazim_adi_soyad.value === "" || document.forms['frm'].zakazim_telefon.value === "") {
+                swal("Hər iki bölməni doldurun");
+                return false;
+            } else {
+                swal("Sorğunuz qeydə alındı");
+                return true;
+            };
+
+
+
+
+
+
+        };
+    </script>
+</body>
+</html>

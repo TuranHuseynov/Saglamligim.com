@@ -1,0 +1,52 @@
+﻿@model IEnumerable<AzmanAzWebPage.Models.Elaqe>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Az/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="text-center">Mesajlar</h2>
+
+<p>
+    @Html.ActionLink("Əlavə et", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Ad
+        </th>
+        <th>
+            Soyad
+        </th>
+        <th>
+            Telefon
+        </th>
+        <th>
+            Mesaj
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.elaqe_ad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.elaqe_soyad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.elaqe_telefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.elaqe_mesaji)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.elaqe_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.elaqe_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.elaqe_id })
+        </td>
+    </tr>
+}
+
+</table>

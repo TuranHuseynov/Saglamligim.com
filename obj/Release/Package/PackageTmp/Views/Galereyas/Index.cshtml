@@ -1,0 +1,48 @@
+﻿@model IEnumerable<AzmanAzWebPage.Models.Galereya>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Az/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="text-center">Galereya</h2>
+
+<p>
+    @Html.ActionLink("Əlavə et", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Şəkil
+        </th>
+        <th>
+            Başlıq
+        </th>
+        <th>
+            İnfo
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="~/Yuklenen/@item.galery_image" style="width:80%;" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.galery_header)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.galery_text)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.galery_id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.galery_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.galery_id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,60 @@
+﻿@model AzmanAzWebPage.Viewmodel.MyModel
+@{
+    ViewBag.Title = "Şirkətimiz";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="contact-top-agileinfo">
+    <div class="container">
+        <h3 class="title-w3layouts contact-head">Haqqimizda <i class="fa fa-bell-o" aria-hidden="true"></i><i class="fa fa-bell" aria-hidden="true"></i></h3>
+        <div class="col-md-6 contact-left-wthree">
+            <h5>Əlaqə nömrələri</h5>
+            <div class="customer-info-w3ls">
+                <img src="https://image.freepik.com/free-vector/mobile-phone-template_1412-16.jpg" alt="" />
+                <div class="customer-right">
+                    <h6>Mobil nömrəmiz</h6>
+                    <p><span>055 440 89 57</span></p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="customer-info-w3ls">
+                <img src="https://i.pinimg.com/originals/b1/a2/c4/b1a2c49e30496b494e9b80f9d66fca42.jpg" alt="" />
+                <div class="customer-right">
+                    <h6>Şəhər nömrəmiz</h6>
+                    <p><span>012  437 80 00</span></p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="col-md-6 contact-right-wthree">
+            <h5>Sosyalda biz</h5>
+            <div class="connect-w3-agile">
+                <i class="fa fa-facebook-square ione" aria-hidden="true"></i>
+                <p>Facebook sehifemizi  <a href="https://www.facebook.com/saglamligim/">Saglamligim</a> izleye ve yeniliklerden xeber ala blersiniz.</p>
+                <div class="clearfix"></div>
+            </div>
+            @*<div class="connect-w3-agile">
+                <i class="fa fa-instagram-square itwo" aria-hidden="true"></i>
+                <p>Instagram sehifemizi<a href="#">Saglamligim</a> izleye ve yeniliklerden xeber ala blersiniz.</p>
+                <div class="clearfix"></div>
+            </div>*@
+        </div>
+    </div>
+</div>
+<!-- contact-form-->
+<div class="jarallax contact-bottom" id="contact">
+    <div class="col-md-7 contact-right-w3l">
+        <h3 class="title-w3layouts white-agileits">Bize mesajiniz <i class="fa fa-bell-o" aria-hidden="true"></i><i class="fa fa-bell white-agileits" aria-hidden="true"></i></h3>
+        <form action="/Home/Contact" method="post">
+            <input type="text" class="name" name="elaqe_ad" placeholder="Adiniz" required="">
+            <input type="text" class="name" name="elaqe_soyad" placeholder="Soyadiniz" required="">
+            
+            <textarea placeholder="Mesajiniz" name="elaqe_mesaji" required=""></textarea>
+            <input type="submit" value="Gonder">
+        </form>
+    </div>
+    <div class="col-md-5 agileits_w3layouts-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2485.353666243956!2d-0.4564841841736156!3d51.47002227962888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48767234cdc56de9%3A0x8fe7535543f64167!2sHeathrow+Airport+(LHR)!5e0!3m2!1sen!2sin!4v1495523475826"></iframe>
+    </div>
+    <div class="clearfix"></div>
+</div>

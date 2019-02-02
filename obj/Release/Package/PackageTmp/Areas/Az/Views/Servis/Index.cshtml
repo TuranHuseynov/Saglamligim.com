@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AzmanAzWebPage.Models.Servi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Az/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="text-center">Xidmətlərimiz</h2>
+
+<p>
+    @Html.ActionLink("Əlavə et", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Xidmət 
+        </th>
+        <th>
+            Məlumat
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.servis_adi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.servis_content)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.servis_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.servis_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.servis_id })
+        </td>
+    </tr>
+}
+
+</table>

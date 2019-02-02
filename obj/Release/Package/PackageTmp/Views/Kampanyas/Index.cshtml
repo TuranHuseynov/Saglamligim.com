@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AzmanAzWebPage.Models.Kampanya>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Az/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Şəkil
+        </th>
+        <th>
+            Kampanya Adı
+        </th>
+        <th>
+            Məhsullar
+        </th>
+        <th>
+            Qiymət
+        </th>
+        <th>
+            Haqqında
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="~/Yuklenen/@item.kampanya_photo" style="width:78%;" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kampanya_adi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kampanya_mehsullari)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kampanya_qiymeti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kampanya_info)
+        </td>
+
+        <td>
+            @Html.ActionLink("Düzəlt", "Edit", new { id = item.kampanya_id }) |
+            @*@Html.ActionLink("Details", "Details", new { id = item.kampanya_id }) |*@
+            @Html.ActionLink("Sil", "Delete", new { id = item.kampanya_id })
+        </td>
+    </tr>
+}
+
+</table>

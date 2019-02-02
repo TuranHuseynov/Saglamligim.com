@@ -1,0 +1,343 @@
+﻿@model AzmanAzWebPage.Viewmodel.MyModel
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="buy-now">
+    <div class="container">
+        <div class="heading-setion-w3ls">
+            <h3 class="title-w3layouts">Məhsullar<i class="fa fa-bell-o" aria-hidden="true"></i><i class="fa fa-bell" aria-hidden="true"></i></h3>
+        </div>
+        <div class="team-grids">
+            <!-- Bottom to top-->
+            <div class="details-top-w3ls">
+                @foreach (var item in Model._mallar)
+                {
+                    if (item.mal_novu == 2)
+                    {
+                        <div class="col-md-3 team-grid">
+                            <!-- normal -->
+                            <div class="ih-item circle effect10 bottom_to_top">
+                                <a href="/Home/Blog/@item.mal_id" style="text-decoration:none;">
+                                    <div class="img"><img src="~/Yuklenen/@item.mal_resmi" alt="img"><p>vip</p></div>
+                                </a>
+                                    <div class="info">
+                                        <h3>₼ @item.mal_qiymeti <span>78 ₼</span></h3>
+                                        <ul>
+                                            @*<li><a href="#"><i class="fa fa-retweet" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>*@
+                                            <li class="cary-li-w3-agileits">
+                                                <div class="snipcart-details top_brand_home_details">
+                                                    <fieldset>
+                                                        <a href="/Home/Blog/@item.mal_id" style="text-decoration:none;"><input type="submit" name="submit" value="sifariş et" class="button" /></a>
+                                                    </fieldset>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                            <!-- end normal -->
+                        </div>
+                    }
+                }
+
+            </div>
+
+            <!-- end Bottom to top-->
+        </div>
+    </div>
+</div>
+<hr />
+
+
+<div class="buy-now">
+    <div class="container">
+        <div class="heading-setion-w3ls">
+            <h3 class="title-w3layouts">Məhsullar<i class="fa fa-bell-o" aria-hidden="true"></i><i class="fa fa-bell" aria-hidden="true"></i></h3>
+        </div>
+        <div class="team-grids">
+            <!-- Bottom to top-->
+            <div class="details-top-w3ls">
+                @foreach (var item in Model._mallar)
+                {
+                    if (item.mal_novu == 1)
+                    {
+                        <div class="col-md-3 team-grid">
+                            <!-- normal -->
+                            <div class="ih-item circle effect10 bottom_to_top">
+                                <a href="/Home/Blog/@item.mal_id" style="text-decoration:none;">
+                                    <div class="img"><img src="~/Yuklenen/@item.mal_resmi" alt="img"><p>premium</p></div>
+                                </a>
+                                <div class="info">
+                                    <h3>@item.mal_qiymeti<span></span></h3>
+                                    <ul>
+                                        @*<li><a href="#"><i class="fa fa-retweet" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>*@
+                                        <li class="cary-li-w3-agileits">
+                                            <div class="snipcart-details top_brand_home_details">
+                                                        <a href="/Home/Blog/@item.mal_id" style="text-decoration:none;"> siFARIS ET</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end normal -->
+                        </div>
+                    }
+                }
+
+            </div>
+
+            <!-- end Bottom to top-->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<section id="carousel">
+        <div class="container">
+            <div class="col-md-12">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="text-center">
+                                <a href="/Home/KompanyadiSerum" class="kompanyamizserum">Ətraflı Bax</a>
+                            </div>
+                            <div class="text-right">
+                                <a href="/Home/KompanyadiSerum" class="kompanyamizkicikserum">Ətraflı Bax</a>
+                            </div>
+
+
+                            <img src="~/YeniWeb/images/serum.jpg" alt="Los Angeles" style="width:100%;">
+
+                        </div>
+                        @*<div class="item">
+                        <div class="text-center">
+                            <a href="/Home/Kompanyadi" class="kompanyamiz">Ətraflı Bax</a>
+                        </div>
+                        <div class="text-right">
+                            <a href="/Home/Kompanyadi" class="kompanyamizkicik">Ətraflı Bax</a>
+                        </div>
+
+
+                        <img src="~/YeniWeb/images/tttt.jpg" alt="Los Angeles" style="width:100%;">
+
+                    </div>
+
+                        <div class="item">
+                            <img src="~/YeniWeb/images/doublecover.jpg" alt="Chicago" style="width:100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="~/YeniWeb/images/nurccover.jpg" alt="New york" style="width:100%;">
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="clearfix"></div>
+
+    <section id="mehsul">
+        <div class="container">
+            <h1 class="text-center" style="font-family: myFirstFont;">Önə çıxanlar</h1>
+            <div class="row">
+                @foreach (var item in Model._mallar)
+                {
+                    if (item.mal_novu == 2)
+                    {
+                        <div class="col-md-3">
+                            <a href="/Home/Blog/@item.mal_id" style="text-decoration:none;">
+                                <div class="itemsmehsul">
+                                    <img src="~/Yuklenen/@item.mal_resmi" style="width: 100%;">
+                                    <h3 class="text-center">@item.mal_bawliq</h3>
+                                    <p id="mehsulqiymetidi">@item.mal_qiymeti</p>
+                                    <h4>@item.mal_adi</h4>
+
+                                </div>
+                            </a>
+                        </div>
+                    }
+
+
+                }
+            </div>
+        </div>
+    </section>
+
+    <div class="clearfix"></div>
+
+
+    <section id="payServices">
+        <div class="container">
+            <p class="text-center basliq">Kampanyalar</p>
+            <div class="row">
+                @foreach (var item in Model._kampanyalar)
+                {
+                <div class="col-md-4">
+                    <a href="/Home/Kompanyadi/@item.kampanya_id" style="color: snow;
+        text-shadow: 1px 1px 11px #dccfcf;">
+                        <div class="itemskampanya">
+                            <img src="~/Yuklenen/@item.kampanya_photo">
+                            <h3 class="text-center">@item.kampanya_adi  - @item.kampanya_qiymeti</h3>
+                            @*<a href="/Home/Kompanyadi/@item.kampanya_id"style="
+        float: right;
+        color: snow;
+        font-size: 17px;">ətraflı</a>
+                        </div>
+                      </a>
+                </div>
+
+
+                }
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="mehsul">
+        <div class="container">
+            <h1 class="text-center" style="font-family: myFirstFont;">Məhsullar</h1>
+            <div class="row">
+                @foreach (var item in Model._mallar)
+                {
+                    if (item.mal_novu == 1)
+                    {
+                        <div class="col-md-3">
+                            <a href="/Home/Blog/@item.mal_id" style="text-decoration:none;">
+                                <div class="itemsmehsul">
+                                    <img src="~/Yuklenen/@item.mal_resmi" style="width: 100%;">
+                                    <h3 class="text-center">@item.mal_bawliq</h3>
+                                    <p id="mehsulqiymetidi">@item.mal_qiymeti</p>
+                                    <h4>@item.mal_adi</h4>
+
+                                </div>
+                            </a>
+                        </div>
+                    }
+
+
+                }
+            </div>
+        </div>
+    </section>
+    <div class="clearfix"></div>
+    <section id="xidmetler">
+        <div class="container">
+            <h1 class="text-center">Xidmətlərimiz</h1>
+            <div class="row">
+                @foreach (var item in Model._servis)
+                {
+                    <div class="col-md-4">
+                        <div class="itemxidmet text-center">
+                            @*<img src="~/YeniWeb/images/formu.png" style="width: 46%;">
+                            <i class="@item.servis_icon front" id="rengcalar" aria-hidden="true"></i>
+
+                            <h2>@item.servis_adi</h2>
+                            <p>@item.servis_content</p>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+    </section>
+    <div class="clearfix"></div>
+
+
+    <section id="threed">
+
+        <div id="slideshow">
+            <h1 class="text-center mhs">Məhsullar</h1>
+            <div class="content">
+                <div class="content-carrousel">
+
+                    @foreach (var item in Model._karusel)
+                    {
+                        <figure class="shadow">
+                            <a href="http://saglamligim.com"><img src="~/Yuklenen/@item.karusel_image" class="karsel"></a>
+                        </figure>
+
+                    }
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="clearfix"></div>
+
+    <div class="loader"></div>
+    <style>
+
+        .karsel:hover {
+            transform: scale(1.5,1.5);
+        }
+    </style>
+
+
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="card1">
+            <div class="title text-center">
+                <i class="fa fa-paper-plane" style="color: whitesmoke;"></i>
+            </div>
+            <h2>@item.endirim_novu</h2>
+            <div class="price text-center">
+                <h4>@item.edirim_faiz</h4>
+            </div>
+            <div class="option text-center">
+                <ul>
+                    <li><i class="fa fa-check"></i>Online Sifariş</li>
+                    <li><i class="fa fa-check"></i>Məkana Çatdırma</li>
+                    <li><i class="fa fa-check"></i>Məxfilik</li>
+
+                </ul>
+            </div>
+            <a href="/Home/EndirimBlog/@item.endirim_id" style="font-family:myFirstFont;">Ətraflı</a>
+        </div>
+    </div>*@
+
+

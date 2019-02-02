@@ -1,0 +1,57 @@
+﻿@model AzmanAzWebPage.Viewmodel.MyModel
+@{
+    ViewBag.Title = "Galereya";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="gallery" id="gallery">
+    <div class="container">
+        <div class="heading-setion-w3ls">
+            <h3 class="title-w3layouts">Galerya <i class="fa fa-bell-o" aria-hidden="true"></i><i class="fa fa-bell" aria-hidden="true"></i></h3>
+        </div>
+        <div class="agileinfo_work_grids">
+
+            @foreach (var item in Model._galereya)
+    {
+        <div class="col-md-4 w3_agile_work_grid gallery1">
+            <div class="wthree_work_grid1">
+                <a href="~/Yuklenen/@item.galery_image" class="b-link-stripe b-animate-go  swipebox" title="@item.galery_header">
+                    <div class="agile_work_grid w3_agileits_sub_work">
+                        <img src="~/Yuklenen/@item.galery_image" alt=" " class="img-responsive" />
+                        <div class="agileits_w3layouts_work">
+                            @item.galery_header
+                        </div>
+                    </div>
+                </a>
+            </div>
+            @*<div class="wthree_work_grid1">
+            <a href="images/g2.jpg" class="b-link-stripe b-animate-go  swipebox" title="Prezzie">
+                <div class="agile_work_grid w3_agileits_sub_work">
+                    <img src="images/g2.jpg" alt=" " class="img-responsive" />
+                    <div class="agileits_w3layouts_work">
+                        Prezzie
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="wthree_work_grid1">
+            <a href="images/g3.jpg" class="b-link-stripe b-animate-go  swipebox" title="Prezzie">
+                <div class="agile_work_grid w3_agileits_sub_work">
+                    <img src="images/g3.jpg" alt=" " class="img-responsive" />
+                    <div class="agileits_w3layouts_work">
+                        Prezzie
+                    </div>
+                </div>
+            </a>
+        </div>*@
+
+        </div>
+}
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="clearfix"></div>

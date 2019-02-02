@@ -1,0 +1,64 @@
+﻿@model IEnumerable<AzmanAzWebPage.Models.Zakazim>
+@{
+    ViewBag.Title = "IndexGorunen";
+    Layout = "~/Areas/Az/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sifarisler</title>
+</head>
+<body>
+    <h2 class="text-center">Görülən</h2>
+    <p>
+        @Html.ActionLink("Əlavə et", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Ad,Soyad
+            </th>
+            <th>
+                Telefon
+            </th>
+            <th>
+                Məhsul
+            </th>
+            <th>
+                Tarix
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.zakazim_adi_soyad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.zakazim_telefon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.zakazim_mehsul)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.zakaz_vaxti)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.Zakaznovu.zakaznovu_ad)
+                </td>*@
+                <td>
+                    @Html.ActionLink("Düzəlt", "Edit", new { id = item.zakazim_id }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.zakazim_id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
+

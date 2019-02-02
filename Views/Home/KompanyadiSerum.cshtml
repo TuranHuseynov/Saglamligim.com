@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "KompanyadiSerum";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section id="kompanyalar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="text-center">
+                    <img src="https://n11scdn.akamaized.net/a1/450/kozmetik-kisisel-bakim/erkek-cilt-bakimi/black-marble-sakal-serumu-bandrollu-ve-orjinal-urun__0812975734035430.jpg" style="width: 74%;
+    margin-bottom: 28px;" />
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-center"> Black Marble</h2>
+                <h3>Qiymət : 29 AZN </h3>
+                <p style="font-size:18px;">
+                   Saqqal serumu.Qısa zamanda istənilən saqqala sahib olmaq üçün sadəcə sifariş edin və yoxlayın.
+                </p>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="col-md-12 col-xs-12">
+                    <form action="/Home/KompanyaBlogSerum" method="post" name="frm">
+                        <div class="md-form mb-5">
+                            <i class="fa fa-user prefix grey-text"></i>
+                            <label data-error="wrong" data-success="right" for="form3">Ad,Soyad</label>
+                            <input type="text" id="form3" class="form-control validate" name="zakazim_adi_soyad" style="margin-bottom: 20px;">
+                        </div>
+                        <div class="md-form mb-4">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <label data-error="wrong" data-success="right" for="form2">Telefon</label>
+                            <input type="tel" name="zakazim_telefon" id="form2" class="form-control validate">
+                        </div>
+                        <input type="text" name="zakazim_mehsul" style="display:none" value="Black Marble" />
+
+                        <div class="text-center">
+                            <button type="submit" style="margin: 20px;font-size: 19px;padding: 6px 27px;border: 1px solid #ccc;border-radius: 42px;background: #175f75;color: white;" onclick="return IsEmpty()">SİFARİŞ</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<script type="text/javascript">
+
+    function IsEmpty() {
+        if (document.forms['frm'].zakazim_adi_soyad.value === "" || document.forms['frm'].zakazim_telefon.value === "") {
+            alert("Hər iki bölməni doldurun");
+            return false;
+        } else {
+            alert("Sorğunuz qeydə alındı");
+            return true;
+        };
+
+
+
+
+
+
+    };
+
+
+
+
+</script>

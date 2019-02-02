@@ -1,0 +1,72 @@
+﻿@model AzmanAzWebPage.Models.Zakazim
+
+@{
+    Layout = "~/Areas/Az/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Zakazim</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.zakazim_adi_soyad)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.zakazim_adi_soyad)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.zakazim_telefon)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.zakazim_telefon)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.zakazim_mehsul)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.zakazim_mehsul)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.zakaz_vaxti)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.zakaz_vaxti)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Zakaznovu.zakaznovu_ad)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Zakaznovu.zakaznovu_ad)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+﻿@model AzmanAzWebPage.Viewmodel.MyModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Az/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="text-center">Saglamligim.com</h2>
+<h3 style="margin-left:15px;"><a href="/Zakazim/Index" style="text-decoration:none;">Sifarişlər : </a> @Model._zakazim.Where(s => s.zakaz_novu_id == 1).Count()</h3> 
+<h3 style="margin-left:15px;"><a href="/Az/Inbox/Index" style="text-decoration:none;">Mesajlar : </a> @Model._elaqe.Count()</h3>
+

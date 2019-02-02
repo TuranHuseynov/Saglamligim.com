@@ -1,0 +1,33 @@
+﻿@model IEnumerable<AzmanAzWebPage.Models.Zakaznovu>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Az/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Sifariş növləri</h2>
+
+<p>
+    @Html.ActionLink("Yeni Sifariş növü yarat", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           Sifariş növü
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.zakaznovu_ad)
+        </td>
+        <td>
+            @Html.ActionLink("Düzəlt", "Edit", new { id=item.zakaznovu_id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.zakaznovu_id })
+        </td>
+    </tr>
+}
+
+</table>
